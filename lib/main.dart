@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pix_key/utils.dart';
 
 import 'home/pages/home_page.dart';
 
