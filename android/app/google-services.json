@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "850576179595",
+    "project_id": "pix-key-management",
+    "storage_bucket": "pix-key-management.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850576179595:android:fd3fdc006d644522f4af8e",
+        "android_client_info": {
+          "package_name": "com.example.pix_key"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850576179595-v94m2gvgnsg5g62kjalr7uto7qh46alh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH0X1pOESiinSs8SsA505bL6zJVZu4upE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850576179595-v94m2gvgnsg5g62kjalr7uto7qh46alh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
