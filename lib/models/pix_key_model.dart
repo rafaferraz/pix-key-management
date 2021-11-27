@@ -1,4 +1,6 @@
-class PixKey {
+import 'package:equatable/equatable.dart';
+
+class PixKey extends Equatable {
   String? id;
   String key;
   String bank;
@@ -34,4 +36,11 @@ class PixKey {
     _data['bank'] = bank;
     return _data;
   }
+
+  @override
+  List<Object?> get props => [
+        this.bank,
+        this.id,
+        this.key,
+      ];
 }
