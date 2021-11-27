@@ -21,8 +21,11 @@ class PixKeyController extends ChangeNotifier {
 
   late FirebaseFirestore db;
 
-  PixKeyController() {
-    db = DBFirestore.get();
+  PixKeyController({bool? isNotTest}) {
+    
+    if (isNotTest ?? true) {
+      db = DBFirestore.get();
+    }
   }
 
   Future<void> addPixKey(PixKey key) async {
@@ -37,7 +40,7 @@ class PixKeyController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void getKeys() async {
+  Future<List<PixKey>> getKeys() async {
     isLoading = true;
     keys.clear();
     final snapshot = await db.collection('keys').get();
@@ -52,9 +55,10 @@ class PixKeyController extends ChangeNotifier {
         .toList();
     isLoading = false;
     notifyListeners();
+    return keys;
   }
 
-  void editKey(PixKey pixKey) async {
+  Future<void> editKey(PixKey pixKey) async {
     db.collection('keys').doc(pixKey.id).update(pixKey.toJson());
     int index = keys.indexWhere((element) => element.id == pixKey.id);
     keys[index] = pixKey;
