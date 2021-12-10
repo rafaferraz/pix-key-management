@@ -24,19 +24,19 @@ dependencies:
   flutter:
     sdk: flutter
   
-  provider: ^6.0.1
-  intl: ^0.17.0
-  brasil_fields: ^1.2.0
-  firebase_core: ^1.10.0
-  cloud_firestore: ^3.1.0
+  provider: 
+  intl: 
+  brasil_fields:
+  firebase_core:
+  cloud_firestore:
 
-  cupertino_icons: ^1.0.2
-  equatable: 2.0.3
+  cupertino_icons: 
+  equatable:
   
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mocktail: 0.2.0
+  mocktail: 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

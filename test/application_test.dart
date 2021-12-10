@@ -1,18 +1,37 @@
+import 'dart:developer';
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pix_key/controller/pix_key_controller.dart';
 import 'package:pix_key/models/pix_key_model.dart';
+import 'package:pix_key/service/service.dart';
 
 void main() {
-  PixKeyController pixKeyController = PixKeyController(isNotTest: false);
+  late PixKeyController controller;
 
-  test('get Color Bank', () {
-    Color expected = pixKeyController.getColorBank('Nubank');
+  setUp(() {
+    controller = PixKeyController(ServiceApplication(isTest: true));
+  });
 
-    expect(
-      expected,
-      Colors.purple[800]!,
-    );
+  group('get Colors', () {
+    test('get Color Bank, when bank exist', () {
+      Color expected = controller.getColorBank('Nubank');
+
+      expect(
+        expected,
+        Colors.purple[800]!,
+      );
+    });
+
+    test('get Color Bank, when bank not exist', () {
+      Color expected = controller.getColorBank('Caixa Econômica Federal');
+
+      expect(
+        expected,
+        Colors.cyan[50]!,
+      );
+    });
   });
 
   group('Teste do Model PixKey', () {
@@ -31,6 +50,13 @@ void main() {
       ));
 
       expect(tPixKey, pixKey);
+    });
+
+    test('toJson', () {
+      var dataJson = {"bank": 'BTG +', "key": '12345678900'};
+      var tJson = tPixKey.toJson();
+
+      expect(tJson, dataJson);
     });
   });
 }

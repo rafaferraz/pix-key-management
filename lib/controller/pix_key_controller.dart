@@ -1,8 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pix_key/database/db_firestore.dart';
 import 'package:pix_key/models/pix_key_model.dart';
+import 'package:pix_key/service/service.dart';
 
 class PixKeyController extends ChangeNotifier {
   List<PixKey> keys = [];
@@ -18,33 +17,21 @@ class PixKeyController extends ChangeNotifier {
   ];
 
   bool isLoading = false;
+  ServiceApplication service;
 
-  late FirebaseFirestore db;
-
-  PixKeyController({bool? isNotTest}) {
-    
-    if (isNotTest ?? true) {
-      db = DBFirestore.get();
-    }
-  }
+  PixKeyController(this.service);
 
   Future<void> addPixKey(PixKey key) async {
-    String id = '';
-    await db
-        .collection('keys')
-        .add(
-          key.toJson(),
-        )
-        .then((value) => id = value.id);
-    keys.add(key.copyWith(idCP: id));
+    PixKey pixKeyRes = await service.addPixKey(key);
+    keys.add(pixKeyRes);
     notifyListeners();
   }
 
   Future<List<PixKey>> getKeys() async {
     isLoading = true;
     keys.clear();
-    final snapshot = await db.collection('keys').get();
-    snapshot.docs
+    final docs = await service.getKeys();
+    docs
         .map(
           (element) => keys.add(
             PixKey.fromJson(
@@ -59,16 +46,20 @@ class PixKeyController extends ChangeNotifier {
   }
 
   Future<void> editKey(PixKey pixKey) async {
-    db.collection('keys').doc(pixKey.id).update(pixKey.toJson());
-    int index = keys.indexWhere((element) => element.id == pixKey.id);
-    keys[index] = pixKey;
-    notifyListeners();
+    bool res = await service.editPixKey(pixKey);
+    if (res) {
+      int index = keys.indexWhere((element) => element.id == pixKey.id);
+      keys[index] = pixKey;
+      notifyListeners();
+    }
   }
 
   Future<void> deleteKey(PixKey pixKey) async {
-    await db.collection('keys').doc(pixKey.id).delete();
-    keys.removeWhere((emp) => emp.id == pixKey.id);
-    notifyListeners();
+    bool res = await service.deletePixKey(pixKey);
+    if (res) {
+      keys.removeWhere((emp) => emp.id == pixKey.id);
+      notifyListeners();
+    }
   }
 
   Color getColorBank(String bank) {
