@@ -14,7 +14,7 @@ Status do Projeto: Concluído ✅
 
 </div>
 
-<h3 align="center">👩🏻‍💻 Equipe</h2>
+<h3 align="center">💻 Equipe</h2>
 
 <p align="center">
 <a href="https://github.com/gustavosimoes">Gustavo Teixeira Simões</a> • <a href="https://github.com/guuhenrique">Gustavo Henrique da Silva Prado</a> • <a href="https://github.com/rafaferraz">Rafaela Cristina Ferraz</a>
@@ -71,6 +71,6 @@ Status do Projeto: Concluído ✅
 
 ### 📸 Visão Geral do Aplicativo
 
-<img width="32%" height="32%" src="images/Image1.jpg?raw=true"> 
-<img width="32%" height="32%" src="images/Image2.jpg?raw=true"> 
-<img width="32%" height="32%" src="images/Image3.jpg?raw=true"> 
+<img align="left" width="30%" height="30%" src="images/Image1.jpg?raw=true"> 
+<img align="center" width="30%" height="30%" src="images/Image2.jpg?raw=true"> 
+<img align="right" width="30%" height="30%" src="images/Image3.jpg?raw=true"> 
