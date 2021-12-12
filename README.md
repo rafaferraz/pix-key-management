@@ -21,12 +21,12 @@ Status do Projeto: Concluído ✅
 </p>
 
 ## 📑 Conteúdo
-- [🔧 Requisitos](#Requisitos)
-- [🧩 Como executar o aplicativo](#Como-executar-o-aplicativo)
-- [📀 Como rodar os testes](#Como-rodar-os-testes)
-- [📸 Visão Geral do Aplicativo](#Visão-Geral-do-Aplicativo)
+<a href="#Requisitos">🔧 Requisitos</a><br>
+<a href="#Como-executar-o-aplicativo">🧩 Como executar o aplicativo</a><br>
+<a href="#Como-rodar-os-testes">📀 Como rodar os testes</a><br>
+<a href="#Visão-Geral-do-Aplicativo">📸 Visão Geral do Aplicativo</a>
 
-## 🔧 Requisitos
+## 🔧 Requisitos <a name="Requisitos"></a>
 1. Instale o [Android Studio](https://developer.android.com/studio).
     - É necessário criar um [emulador](https://www.youtube.com/watch?v=xSC8j3gl7xM) ou baixá-lo no seu celular para utilizar o aplicativo.
 
@@ -45,7 +45,7 @@ Status do Projeto: Concluído ✅
 
 3. Utilizamos o [Visual Studio Code](https://code.visualstudio.com/) mas também é possível utilizar outro editor de sua preferência, basta configurá-lo corretamente para utilizar o Flutter e o Java caso necessário.
     
-## 🧩 Como executar o aplicativo
+## 🧩 Como executar o aplicativo <a name="Como-executar-o-aplicativo"></a>
 1. Utilizando o terminal do Git Bash, clone o repositório em sua máquina através do seguinte comando:
     ```
     $ git clone https://github.com/rafaferraz/pix-key-management.git
@@ -60,7 +60,7 @@ Status do Projeto: Concluído ✅
     ```
 4. Escolha a opção que deseja executar.
 
-## 📀 Como rodar os testes
+## 📀 Como rodar os testes <a name="Como-rodar-os-testes"></a>
 - Se estiver utlizando o Visual Studio Code, ou outro editor que permita, é possível executar os testes através do próprio arquivo `application_test.dart` que se encontra na pasta `test`.
 
 - Outra opção é rodar através do terminal. Para isso utilize o comando:
@@ -68,7 +68,7 @@ Status do Projeto: Concluído ✅
     flutter test
     ```
 
-## 📸 Visão Geral do Aplicativo
+## 📸 Visão Geral do Aplicativo <a name="Visão-Geral-do-Aplicativo"></a>
 <div align="center">
 <img width="32%" height="32%" src="images/Image1.jpg?raw=true"> <img width="32%" height="32%" src="images/Image2.jpg?raw=true"> <img width="32%" height="32%" src="images/Image3.jpg?raw=true"> 
 </div>
