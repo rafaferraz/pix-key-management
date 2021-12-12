@@ -71,6 +71,4 @@ Status do Projeto: Concluído ✅
 
 ### 📸 Visão Geral do Aplicativo
 
-<img align="left" width="30%" height="30%" src="images/Image1.jpg?raw=true"> 
-<img align="center" width="30%" height="30%" src="images/Image2.jpg?raw=true"> 
-<img align="right" width="30%" height="30%" src="images/Image3.jpg?raw=true"> 
+<img align="left" width="30%" height="30%" src="images/Image1.jpg?raw=true"> <img align="center" width="30%" height="30%" src="images/Image2.jpg?raw=true"> <img align="right" width="30%" height="30%" src="images/Image3.jpg?raw=true"> 
